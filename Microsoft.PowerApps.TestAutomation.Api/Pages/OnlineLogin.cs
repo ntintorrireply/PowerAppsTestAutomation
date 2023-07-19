@@ -145,14 +145,14 @@ namespace Microsoft.PowerApps.TestAutomation.Api
                     }
 
                     Debug.WriteLine($"Waiting MainPage");
-                    driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.MainPage], Elements.Xpath[Reference.Login.NewMainPage])
+                    driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.NewMainPage])
                         , new TimeSpan(0, 2, 0),
                         e =>
                         {
                             try
                             {
                                 Debug.WriteLine($"Waiting apps-list");
-                                e.WaitUntilVisible(By.ClassName("apps-list"), new TimeSpan(0, 0, 30));
+                                e.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.MainPageApps], new TimeSpan(0, 0, 30));
                             }
                             catch (Exception exc)
                             {

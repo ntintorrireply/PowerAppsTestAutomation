@@ -19,6 +19,7 @@ namespace Microsoft.PowerApps.TestAutomation.Api
             { "Login_SignIn", "id(\"cred_sign_in_button\")"},
             { "Login_MainPage", "//div[contains(@class,\"home-page-component\")]"},
             { "Login_NewMainPage", "//div[contains(@class,\"homePageHero\")]"},
+            { "Login_MainPageApps", "//div[contains(@class,\"homePageApps\")]"},
             { "Login_StaySignedIn", "id(\"idSIButton9\")"},
 
             //TestAutomation
@@ -52,6 +53,7 @@ namespace Microsoft.PowerApps.TestAutomation.Api
             public static string SignIn = "Login_SignIn";
             public static string MainPage = "Login_MainPage";
             public static string NewMainPage = "Login_NewMainPage";
+            public static string MainPageApps = "Login_MainPageApps";
             public static string StaySignedIn = "Login_StaySignedIn";
             public static int SignInAttempts = 3;
         }
