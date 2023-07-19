@@ -145,7 +145,7 @@ namespace Microsoft.PowerApps.TestAutomation.Api
                     }
 
                     Debug.WriteLine($"Waiting MainPage");
-                    driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.MainPage])
+                    driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.MainPage], Elements.Xpath[Reference.Login.NewMainPage])
                         , new TimeSpan(0, 2, 0),
                         e =>
                         {
