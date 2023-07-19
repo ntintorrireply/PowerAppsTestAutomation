@@ -144,12 +144,14 @@ namespace Microsoft.PowerApps.TestAutomation.Api
                         driver.ClickWhenAvailable(By.XPath(Elements.Xpath[Reference.Login.StaySignedIn]));
                     }
 
+                    Debug.WriteLine($"Waiting MainPage");
                     driver.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.MainPage])
                         , new TimeSpan(0, 2, 0),
                         e =>
                         {
                             try
                             {
+                                Debug.WriteLine($"Waiting apps-list");
                                 e.WaitUntilVisible(By.ClassName("apps-list"), new TimeSpan(0, 0, 30));
                             }
                             catch (Exception exc)

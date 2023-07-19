@@ -59,7 +59,7 @@ namespace Microsoft.PowerApps.TestAutomation.Tests
             BrowserOptions options = RunTestSettings.Options;
             options.BrowserType = _browserType;
             options.DriversPath = _driversPath;
-            options.PrivateMode = _usePrivateMode == "true" ? true: false;
+            options.PrivateMode = _usePrivateMode == "true" ? true : false;
 
             using (var appBrowser = new PowerAppBrowser(options))
             {
