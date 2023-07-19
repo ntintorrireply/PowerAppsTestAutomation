@@ -105,11 +105,16 @@ namespace Microsoft.PowerApps.TestAutomation.Api
             if (userIdFieldVisible)
             {
                 Debug.WriteLine("UserID field is visible. Proceeding with login.");
+                
+                Debug.WriteLine($"Username: {username.ToUnsecureString()}");
+                
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Login.UserId])).SendKeys(username.ToUnsecureString());
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Login.UserId])).SendKeys(Keys.Tab);
                 driver.FindElement(By.XPath(Elements.Xpath[Reference.Login.UserId])).SendKeys(Keys.Enter);
 
                 Thread.Sleep(2000);
+
+                Debug.WriteLine($"Value of redirectAction: {redirectAction}");
 
                 //If expecting redirect then wait for redirect to trigger
                 if (redirectAction != null)
@@ -125,6 +130,7 @@ namespace Microsoft.PowerApps.TestAutomation.Api
                 {
                     Thread.Sleep(1000);
 
+                    Debug.WriteLine($"Password: {password.ToUnsecureString()}");
                     driver.FindElement(By.XPath(Elements.Xpath[Reference.Login.LoginPassword])).SendKeys(password.ToUnsecureString());
                     driver.FindElement(By.XPath(Elements.Xpath[Reference.Login.LoginPassword])).SendKeys(Keys.Tab);
                     driver.FindElement(By.XPath(Elements.Xpath[Reference.Login.LoginPassword])).Submit();
