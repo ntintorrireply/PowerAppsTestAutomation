@@ -152,7 +152,7 @@ namespace Microsoft.PowerApps.TestAutomation.Api
                             try
                             {
                                 Debug.WriteLine($"Waiting apps-list");
-                                e.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.MainPageApps], new TimeSpan(0, 0, 30));
+                                e.WaitUntilVisible(By.XPath(Elements.Xpath[Reference.Login.MainPageApps]), new TimeSpan(0, 0, 30));
                             }
                             catch (Exception exc)
                             {
